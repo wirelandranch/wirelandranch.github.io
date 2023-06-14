@@ -34,13 +34,13 @@ div.loading {
 }
 
 @keyframes FadeUpAndOut {
-  0%   {opacity:1; height: 100vh;}
-  10%   {opacity:1; height: 100vh;}
-  20%   {opacity:1; height: 100vh;}
-  30%   {opacity:0.8; height: 100vh;}
-  40%   {opacity:0.5; height: 100vh;}
-  50%  {opacity:0.2; height: 100vh;}
-  100% {opacity:0; height: 0px;}
+  0%   {opacity:1; }
+  10%   {opacity:1; }
+  20%   {opacity:1; }
+  30%   {opacity:0.8; }
+  40%   {opacity:0.5; }
+  50%  {opacity:0.2; }
+  100% {opacity:0;}
 }
 
 
@@ -65,12 +65,34 @@ div.loading {
   100% {width: 20%; }
 }
 
+div.content.fancy > * {
+	position: absolute;
+}
+
+#loading {
+	z-index:11;
+}
+#welcome {
+	z-index:7;
+}
+#welcome2{
+	z-index:5;
+}
+#welcomeWR{
+	z-index:3;
+}
+
+#pageContent{
+	z-index: 1;
+}
+
 .content a, .content a:hover, .content a:visited{
 	display: block;
 	text-decoration: none;
 	color: white;
 }
 .content a.card {
+	width: 100%;
 	font-family: 'Ahsing', serif;
 	font-size: 20vw;
 	line-height: 1em;	
@@ -78,12 +100,11 @@ div.loading {
 	align-items: center;
     justify-content: center;
     text-align: center;
-
+	background-color: #F4C4E6;
 	height: 100vh;
 }
 
-
-a.wireland_bg {
+a.wireland_bg > div {
    background: url(../images/wireland.png) 0 0 / cover no-repeat;
    background-position: center;
    -webkit-background-clip: text;

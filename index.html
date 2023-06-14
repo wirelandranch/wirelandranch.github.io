@@ -9,9 +9,9 @@
   <link rel="preload" href="images/the_heart.png" as="image" type="image/png" crossorigin>
   <link rel="preload" href="css/Ahsing-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.1">
   <script type="application/javascript">
- 	window.addEventListener("DOMContentLoaded", (event) => {
+ window.addEventListener("DOMContentLoaded", (event) => {
 		setTimeout( 
 			() => { 
 				document.querySelector("div.loading").classList.add("hidden");
@@ -37,16 +37,16 @@
   </script>
 </head>
 <body>
-	<div class="loading">
-		<a href="#welcome" title="click here to start the adventure" onclick='return false;'>
-			<img src="images/the_heart.png" title="the beating heart of darkness, touch to come inside..." />
-		</a>
-	</div>
 	<div class="content"> 
-		<a id="welcome" href="#welcome2" onclick='return false;' class="card wireland_bg">welcome</a>
-		<a id="welcome2" href="#welcomeWR" onclick='return false;' class="card wireland_bg">to</a>
-		<a id="welcomeWR" href="#nav" onclick='return false;' class="card wireland_bg">WIRELAND RANCH</a>
-		<div class="pageContent">
+		<div id="loading" class="loading">
+			<a href="#welcome" title="click here to start the adventure" onclick='return false;'>
+				<img src="images/the_heart.png" title="the beating heart of darkness, touch to come inside..." />
+			</a>
+		</div>
+		<a id="welcome" href="#welcome2" onclick='return false;' class="card wireland_bg"><div>welcome</div></a>
+		<a id="welcome2" href="#welcomeWR" onclick='return false;' class="card wireland_bg"><div>to</div></a>
+		<a id="welcomeWR" href="#nav" onclick='return false;' class="card wireland_bg"><div>WIRELAND RANCH</div></a>
+		<div id="pageContent" class="pageContent">
 			<div id="nav">
 				<div class="logoText">
 					WIRELAND RANCH
@@ -56,10 +56,8 @@
 				<ul class="links">
 					<li class="selected"><a href="/">TL;DR</a></li>
 					<li><a href="/link-pit">Link Pit</a></li>
-					<li><a href="/blog">Blog</a></li>
 					<li><a href="/episodes">Episodes</a></li>
 					<li><a href="/lore">Lore</a></li>
-					<li><a href="/merch">Merch</a></li>
 				</ul>
 			</div>
 
@@ -74,5 +72,8 @@ Welcome to Wireland Ranch
 		</div>
 
 	</div>
+<script type="application/javascript">
+	document.querySelector("div.content").classList.add("fancy");
+</script>
 </body>
 </html>

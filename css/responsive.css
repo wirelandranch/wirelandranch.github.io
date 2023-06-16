@@ -1,0 +1,43 @@
+@media screen and (max-width: 1200px) {
+  #pageContent {
+  	background-size: cover;
+  	background-position: center;
+  }
+  #pageContent div.text {
+  	margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+	#nav{
+		flex-direction: column;
+	    align-items: center;
+	    background-color: rgba(191, 75, 150, 0.75);
+	}
+	#nav div.logoText {
+		max-width: unset;
+		font-size: 10vw;
+		text-align: center;
+
+		padding-top: 25px;
+		
+		border-radius: 0.25em;
+	}
+
+	#nav .links {
+		padding-left: 0px;
+		margin-left: unset;
+		font-size: 0.7em;
+	}
+
+	#pageContent div.text {
+		padding: 1em;
+		width: calc(100% - 2em);
+	}
+
+	#pageContent div.text.purpley {
+		
+    background-color: rgba(79, 123, 140, 0.85);
+	}
+}

@@ -9,29 +9,11 @@
   <link rel="preload" href="images/the_heart.png" as="image" type="image/png" crossorigin>
   <link rel="preload" href="css/Ahsing-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
-  <link rel="stylesheet" href="css/styles.css?v=1.0.1">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.2">
+  <link rel="stylesheet" href="css/responsive.css?v=1.0.2">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <script type="application/javascript">
- window.addEventListener("DOMContentLoaded", (event) => {
-		setTimeout( 
-			() => { 
-				document.querySelector("div.loading").classList.add("hidden");
-			setTimeout(() => {
-				document.querySelector("div.loading").remove();
-				document.querySelector("#welcome").classList.add("hidden");
-				setTimeout(() => {
-				document.querySelector("#welcome").remove();
-				document.querySelector("#welcome2").classList.add("hidden");
-				setTimeout(() => {
-				document.querySelector("#welcome2").remove();
-				document.querySelector("#welcomeWR").classList.add("hidden");
-				setTimeout(() => {
-				document.querySelector("#welcomeWR").remove();
-			}, 2000);
-			}, 2000);
-			}, 2000);
-			}, 2000);
-			 }, 4000);
-	});
+
 
 
   </script>
@@ -61,19 +43,47 @@
 				</ul>
 			</div>
 
-			<div class="text"> In between this cage match maelstrom we call life and whatever comes next, a tiny shack hides deep in the arid Mojave wastelands.
-
-Unimposing from the outside: all rotted wood, trash, and the broken promise of American dreams. But, if you were ever able to enter the door, you will be introduced to a reality where your life means less than the dust settling into the cracks on the floor. Where the molecules that make up your entire being could be rearranged into a far more useful utensil. Where every tragedy is a ritual and every sacrifice is a joke.
-
-Welcome to the color soaked psychedelic nightmare you have yearned to have whispered into your ears.
-
-Welcome to Wireland Ranch
+			<div class="text">
+				<p>In between this cage match maelstrom we call life and whatever comes next, a tiny shack hides deep in the arid Mojave wastelands.</p>
+				<p>Unimposing from the outside: all rotted wood, trash, and the broken promise of American dreams. But, if you were ever able to enter the door, you will be introduced to a reality where your life means less than the dust settling into the cracks on the floor. Where the molecules that make up your entire being could be rearranged into a far more useful utensil. Where every tragedy is a ritual and every sacrifice is a joke.</p>
+				<p>Welcome to the color soaked psychedelic nightmare you have yearned to have whispered into your ears.</p>
+				<p class="center">Welcome to Wireland Ranch</p>
 			</div>
 		</div>
 
 	</div>
 <script type="application/javascript">
 	document.querySelector("div.content").classList.add("fancy");
+
+	if("wireland_loaded" in localStorage){
+		document.querySelector("#loading").remove();
+		document.querySelector("#welcome").remove();
+		document.querySelector("#welcome2").remove();
+		document.querySelector("#welcomeWR").remove();
+	} else {
+		 window.addEventListener("DOMContentLoaded", (event) => {
+		setTimeout( 
+			() => { 
+				document.querySelector("div.loading").classList.add("hidden");
+			setTimeout(() => {
+				document.querySelector("div.loading").remove();
+				document.querySelector("#welcome").classList.add("hidden");
+				setTimeout(() => {
+				document.querySelector("#welcome").remove();
+				document.querySelector("#welcome2").classList.add("hidden");
+				setTimeout(() => {
+				document.querySelector("#welcome2").remove();
+				document.querySelector("#welcomeWR").classList.add("hidden");
+				setTimeout(() => {
+				document.querySelector("#welcomeWR").remove();
+				localStorage.setItem("wireland_loaded", "thanks for coming round the bend friend");
+			}, 2000);
+			}, 2000);
+			}, 2000);
+			}, 2000);
+			 }, 3500);
+	});
+	}
 </script>
 </body>
 </html>
